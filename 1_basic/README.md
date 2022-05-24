@@ -5,7 +5,7 @@
 Lets start with the caninical python hello world
 ```
 # hello.pyx
-print("Hello world")
+print("Hello world"i)
 
 ```
 
@@ -19,4 +19,14 @@ setup(
 	ext_modules = cythonize("hello.pyx")
 )
 ```
+
+Then, Compile to `.so` file
+```
+python setup.py build_ext --inplace
+
+python
+>> import hello
+Hello world
+```
+
 
